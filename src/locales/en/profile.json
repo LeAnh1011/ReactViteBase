@@ -1,0 +1,13 @@
+{
+  "profile.changePassword.title": "Đổi mật khẩu",
+  "profile.changePassword.name": "Tên đăng nhập",
+  "profile.changePassword.oldPassword": "Mật khẩu cũ",
+  "profile.changePassword.newPassword": "Mật khẩu mới",
+  "profile.changePasswordPage.ruleOfPassword": "Mật khẩu chứa 8 đến 30 ký tự không dấu, phải bao gồm 3 trong 4 loại ký tự: số, chữ in hoa, chữ thường và ký tự đặc biệt",
+  "profile.changePassword.verifyNewPassword": "Nhập lại mật khẩu mới",
+  "profile.action.goToDetail": "Profile",
+  "profile.action.changePassword": "Đổi mật khẩu",
+  "profile.action.receivingSystemEmail": "Nhận email hệ thống",
+  "profile.action.receivingSystemNotification": "Nhận thông báo hệ thống",
+  "profile.action.logout": "Đăng xuất"
+}

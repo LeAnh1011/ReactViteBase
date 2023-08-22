@@ -1,0 +1,167 @@
+//External style files
+@import "~bootstrap/scss/bootstrap";
+@import "~react3l-ui-library/build/react3l.min.css";
+@import "~antd/dist/antd.min.css";
+// Internal style files
+@import "./font";
+@import "./design-system/design-system";
+@import "./custom-antd";
+
+@mixin box-shadow--popover {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// body
+body {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  color: var(--color-text);
+  font-size: var(--text-base-size);
+  background-color: #f4f4f4 !important;
+}
+
+.page-content {
+  overflow-y: auto;
+  margin-top: 121px;
+
+  .page {
+    &.page-master {
+      height: 100%;
+      background-color: var(--color-white);
+      position: relative;
+      .page-master__pagination {
+        width: 100%;
+        background-color: white;
+      }
+
+      .page-master__info {
+        padding: 16px 16px 24px 16px;
+        .page-master__title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        .page-master__des {
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.16px;
+          color: var(--palette-gray-70);
+        }
+      }
+      .page-master__view {
+        .filter-title {
+          white-space: nowrap;
+        }
+      }
+      .page-master__all-actions {
+        position: relative;
+        .btn-filter {
+          position: relative;
+          &.btn--shadow {
+            background-color: #f4f4f4 !important;
+            @include box-shadow--popover();
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .component__input-search__icon-box {
+          margin: 3px 12px 0 12px;
+        }
+      }
+
+      .page-master__content-table {
+        height: calc(100% - 128px);
+        .page-master__table {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .page-table {
+            overflow: auto;
+          }
+        }
+      }
+      .page-master__filter-action-search {
+        width: 100%;
+        .component__input-search-container {
+          width: 100%;
+        }
+      }
+    }
+    &.page-detail {
+      height: 100%;
+      background-color: var(--color-white);
+      overflow: auto;
+      .page-detail__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--palette-gray-100);
+        border-bottom: 1px solid #e0e0e0;
+        padding: 16px 0px;
+      }
+      .page-detail__sub-title {
+        padding-top: 16px;
+        padding-bottom: 24px;
+        .sub-title__label {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          color: var(--palette-gray-100);
+        }
+        .sub-title__description {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: var(--palette-gray-70);
+        }
+      }
+      .form-item__container {
+        .bg-white {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  .button-action-table {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.app-footer {
+  position: fixed;
+  height: 40px;
+  z-index: 2;
+  background-color: var(--palette-gray-80);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2),
+    0px 2px 10px rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.warning-password-rule {
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--palette-gray-70);
+  }
+}
+.text-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.custom-tree {
+  .tree-container .ant-tree-list .ant-tree-node-content-wrapper {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

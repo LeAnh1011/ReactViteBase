@@ -1,0 +1,95 @@
+.switcher-container {
+  color: var(--color-white);
+  .switcher-box__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--theme-color);
+    color: var(--color-white);
+    border: none;
+    &:visited {
+      color: var(--color-white);
+    }
+
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+
+    &:active {
+      background-color: var(--color-secondary);
+    }
+
+    &:focus-within {
+      background-color: var(--color-secondary);
+      outline: 2px solid #fff !important;
+      outline-offset: -2px;
+    }
+
+    &.disabled {
+      color: var(--palette-gray-50) !important;
+      background-color: var(--palette-gray-30) !important;
+    }
+    &.switcher-box__btn-close {
+      border-left: 1px solid var(--palette-gray-80);
+    }
+  }
+  .switcher-divider {
+    height: 1px;
+    width: 208px;
+    background-color: var(--palette-gray-80);
+  }
+  .switcher-wrapper {
+    width: 256px;
+    right: 0;
+    margin-top: 4px;
+    background-color: var(--palette-gray-100);
+
+    .switcher-content {
+      .switcher-list {
+        height: calc(100vh - 111.84px);
+        .switcher-item {
+          .switcher-item__header {
+            padding: 8px 16px;
+            font-weight: 400;
+            font-size: 12px;
+          }
+          .switcher-divider__header {
+            margin: 0 16px;
+            height: 1px;
+            background-color: var(--palette-gray-80);
+          }
+          .switcher-item__site {
+            &:hover {
+              cursor: pointer;
+              background: var(--palette-gray-80);
+            }
+            .switcher-item__site-detail {
+              display: flex;
+              align-items: center;
+              padding: 8px 16px;
+              font-size: 14px;
+              .switcher-item__icon {
+                img {
+                  height: 16px;
+                  width: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    .switcher-footer {
+      display: flex;
+      box-shadow: inset 0px 1px 0px var(--palette-gray-90);
+      height: 48px;
+    }
+  }
+}

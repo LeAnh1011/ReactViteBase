@@ -1,0 +1,18 @@
+{
+  "general.actions.view": "",
+  "general.actions.edit": "",
+  "general.actions.delete": "",
+  "general.actions.create": "",
+  "general.actions.label": "",
+  "general.titles.edit": "",
+  "general.titles.create": "",
+  "general.toasts.error": "",
+  "general.toasts.success": "",
+  "general.deletes.title": "",
+  "general.deletes.content": "",
+  "general.errors.validations.typeError": "",
+  "general.errors.validations.required": "",
+  "general.notification.title": "",
+  "general.notification.unread": "",
+  "general.notification.viewAll": ""
+}

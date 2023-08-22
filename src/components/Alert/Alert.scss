@@ -1,0 +1,30 @@
+.alert__container {
+  display: flex;
+  background: #ede5ff;
+  max-width: 512px;
+  width: 100%;
+
+  .alert__description {
+    flex-grow: 1;
+    .description__title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #161616;
+    }
+    .description__content {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #525252;
+    }
+    .description__action {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #0f62fe;
+    }
+  }
+}

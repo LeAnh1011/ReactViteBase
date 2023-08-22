@@ -1,0 +1,88 @@
+.input-search__container {
+  .input-search__icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    width: 48px;
+    height: 47px;
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+    &:visited {
+      color: var(--color-white);
+    }
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+
+    &:active {
+      background-color: var(--color-secondary);
+    }
+
+    &:focus-within {
+      background-color: var(--color-secondary);
+    }
+  }
+
+  .input-search__wrapper {
+    height: 48px !important;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-primary);
+    }
+
+    &.active-background {
+      box-shadow: inset 0 0 0 2px var(--color-primary);
+      background-color: var(--palette-grayHover-10) !important;
+    }
+    &.full-width {
+      width: 100%;
+      background-color: var(--palette-gray-10);
+    }
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    .input-search__box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .component__input-search {
+        border: none !important ;
+        outline: none;
+        background-color: var(--palette-grayHover-100);
+      }
+      .input-icon__clear {
+        color: var(--palette-coolGray-50);
+      }
+    }
+    .box-input-search {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 48px);
+    }
+    &.input-search__visible {
+      width: 100%;
+      transition: width 0.3s;
+      transform: translate(0%);
+      outline: 2px solid white;
+      outline-offset: -2px;
+      .input-search__icon {
+        background-color: var(--palette-grayHover-100);
+      }
+      button:not(.input-search__icon):hover {
+        border: none;
+      }
+    }
+    &.input-search__hidden {
+      overflow: hidden;
+      width: 48px !important;
+      transition: width 0.3s;
+    }
+  }
+}
