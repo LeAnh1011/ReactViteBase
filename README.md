@@ -53,8 +53,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `yarn lint`
 
 This command scans your project's source code, analyzing it against predefined rules or configurations, and provides detailed feedback on any deviations from the established guidelines.
