@@ -121,6 +121,7 @@
         height: 48px;
         font-size: 14px;
         background: var(--palette-gray-80);
+        color: white;
         &.active {
           background: var(--palette-grayHover-80);
         }
@@ -229,6 +230,7 @@
           top: 0;
           background-color: var(--theme-color);
           .navbar-dropdown__item {
+            color: white;
             padding: 8px 16px;
             &:hover {
               background-color: var(--palette-grayHover-80);

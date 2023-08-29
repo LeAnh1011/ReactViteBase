@@ -1,7 +1,7 @@
 import { ChevronDown } from "@carbon/icons-react";
 import classNames from "classnames";
 import { Menu } from "config/menu";
-import React, { FC } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +9,7 @@ interface NabarItemProps {
   item?: Menu;
   index?: number;
 }
-const NavbarItem: FC<NabarItemProps> = (props: NabarItemProps) => {
+const NavbarItem = (props: NabarItemProps) => {
   const { item, index } = props;
 
   const [translate] = useTranslation();
@@ -92,14 +92,16 @@ const NavbarItem: FC<NabarItemProps> = (props: NabarItemProps) => {
               </>
             )
           : menu.show && (
-              <NavLink className="navbar-dropdown__item" to={menu.link}>
+              <NavLink
+                className="navbar-dropdown__item m-r--2xs"
+                to={menu.link}
+              >
                 {translate(`${menu.name}`)}
               </NavLink>
             )}
       </React.Fragment>
     );
   };
-
   return (
     <React.Fragment>
       {item.children ? (
@@ -109,7 +111,10 @@ const NavbarItem: FC<NabarItemProps> = (props: NabarItemProps) => {
       ) : (
         item.show && (
           <li className="nav-item nav-dropdown" key={index}>
-            <NavLink to={item.link} className="navbar-dropdown__toggle">
+            <NavLink
+              to={item.link}
+              className="navbar-dropdown__toggle m-r--2xs"
+            >
               <div className="d-flex align-items-center">
                 <span className="m-r--2xs">{item.icon}</span>
                 <span>{translate(`${item.name}`)}</span>
