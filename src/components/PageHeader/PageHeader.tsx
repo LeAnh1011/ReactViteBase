@@ -38,7 +38,11 @@ const PageHeader = (props: PageHeaderProps) => {
                     "breadcrumb-active": index === breadcrumbs.length - 1,
                   })}
                 >
-                  <NavLink to={item.path}>{item.name}</NavLink>
+                  {item.path ? (
+                    <NavLink to={item.path}>{item.name}</NavLink>
+                  ) : (
+                    <span className="text-link">{item.name}</span>
+                  )}
                 </li>
               ))}
             </ul>
