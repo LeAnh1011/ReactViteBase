@@ -6,7 +6,6 @@ import { utilService } from "core/services/common-services/util-service";
 import { Profile as ProfileModel } from "core/models/Profile";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 import { authenticationRepository } from "core/repositories/AuthenticationRepository";
 import { profileRepository } from "core/repositories/ProfileRepository";
 import { useAppDispatch } from "rtk/hook";
@@ -23,7 +22,6 @@ interface ProfileProps {
 
 const Profile = (props: ProfileProps) => {
   const { profile, setActiveProfile, setVisibleDrawer } = props;
-  const history = useHistory();
   const [translate] = useTranslation();
   const ref = useRef<HTMLDivElement>();
   const dispatch = useAppDispatch();
@@ -39,11 +37,8 @@ const Profile = (props: ProfileProps) => {
   }, [profile]);
 
   const handleGoDetail = React.useCallback(() => {
-    history.push({
-      pathname: PORTAL_APP_USER_ROUTE,
-      search: `?appUserId=${profile.userId}`,
-    });
-  }, [history, profile]);
+    window.location.href = `${PORTAL_APP_USER_ROUTE}/app-user-detail/view?appUserId=${profile.userId}`;
+  }, [profile]);
 
   const handleShowDrawer = React.useCallback(() => {
     setActiveProfile(false);
