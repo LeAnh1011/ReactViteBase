@@ -45,6 +45,7 @@
             }
             .section-right {
               margin-top: var(--space-lg);
+              height: calc(100% - var(--space-lg));
             }
           }
         }
