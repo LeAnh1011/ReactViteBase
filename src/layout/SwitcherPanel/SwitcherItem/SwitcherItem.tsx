@@ -1,6 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { PORTAL_LANDING_PAGE_ROUTE } from "config/route-const";
 import { SubSystem } from "core/models/SubSystem";
 
 export interface SwitcherItemProps {
@@ -10,15 +8,10 @@ export interface SwitcherItemProps {
 
 const SwitcherItem = (props: SwitcherItemProps) => {
   const { item } = props;
-  const history = useHistory();
 
   const handleClickSite = React.useCallback(() => {
-    if (item?.path === "/portal/") {
-      history.push(PORTAL_LANDING_PAGE_ROUTE);
-    } else {
-      window.location.href = `${item?.path}`;
-    }
-  }, [item, history]);
+    window.location.href = `${item?.path}`;
+  }, [item]);
 
   return (
     <div
