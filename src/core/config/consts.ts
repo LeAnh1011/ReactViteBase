@@ -66,8 +66,8 @@ export const ACTION_URL_REGEX = /^(\/?rpc)/;
 /**
  * route constants
  */
-export const ROOT_ROUTE: string = import.meta.env.BASE_URL;
-export const LOGIN_ROUTE: string = join(ROOT_ROUTE + "/login");
-export const LOGOUT_ROUTE: string = join(ROOT_ROUTE + "/logout");
+export const ROOT_ROUTE: string = process.env.VITE_PUBLIC_URL;
 export const FORBIDENT_ROUTE = join(ROOT_ROUTE + "/403");
 export const NOT_FOUND_ROUTE = join(ROOT_ROUTE + "/404");
+export const LOGIN_ROUTE = "/login";
+export const LOGOUT_ROUTE = "/logout";
