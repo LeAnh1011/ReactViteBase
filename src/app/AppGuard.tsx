@@ -55,11 +55,11 @@ const AppGuard = () => {
           },
           error: () => {
             localStorage.removeItem("profile");
-            history.push(LOGIN_ROUTE);
+            window.location.href = LOGIN_ROUTE;
           },
         });
     },
-    [history, dispatch]
+    [dispatch]
   );
 
   React.useEffect(() => {
