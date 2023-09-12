@@ -44,8 +44,7 @@ export const utilService = {
   useClickOutside(
     ref: RefObject<HTMLElement>,
     callback: () => void,
-    exceptNode?: string[],
-    typeClass?: boolean
+    exceptNode?: string[]
   ) {
     const handleClickOutside = React.useCallback(
       (event: MouseEvent) => {
@@ -54,9 +53,9 @@ export const utilService = {
         );
         if (exceptNode && exceptNode.length > 0) {
           exceptNode.forEach((value: string) => {
-            const node = typeClass
-              ? document.getElementsByClassName(value)[0]
-              : document.getElementById(value);
+            const nodeFromId = document.getElementById(value);
+            const nodeFromClass = document.getElementsByClassName(value)[0];
+            const node = nodeFromId || nodeFromClass;
             canInvokeCallback ||= node.contains(event.target as HTMLElement);
           });
         }
@@ -66,7 +65,7 @@ export const utilService = {
           }
         }
       },
-      [callback, exceptNode, ref, typeClass]
+      [callback, exceptNode, ref]
     );
 
     React.useEffect(() => {
