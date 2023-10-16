@@ -42,7 +42,7 @@
     "react3l-common": "^6.0.0",
     "react3l-decorators": "^6.0.0",
     "react3l-localization": "^6.0.0",
-    "react3l-ui-library": "0.2.6",
+    "react3l-ui-library": "0.2.16",
     "reactstrap": "8.9.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "^7.3.0",

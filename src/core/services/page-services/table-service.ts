@@ -1,24 +1,13 @@
 import { Model, ModelFilter } from "react3l-common";
-import {
-  ColumnGroupType,
-  ColumnType,
-  SortOrder,
-  SorterResult,
-} from "antd/lib/table/interface";
+import { SortOrder, SorterResult } from "antd/lib/table/interface";
 import React, { useCallback } from "react";
-import { FilterAction, FilterActionEnum } from "./filter-service";
-import { ValidationField } from "../common-services/validation-service";
 import * as yup from "yup";
-
-export declare type ToogleColumsType<T = unknown> = ((
-  | ColumnGroupType<T>
-  | ColumnType<T>
-) & { isShow?: boolean })[];
-
-export declare type ToogleColumType<T = unknown> = (
-  | ColumnGroupType<T>
-  | ColumnType<T>
-) & { isShow?: boolean };
+import {
+  FilterAction,
+  FilterActionEnum,
+  ToogleColumsType,
+  ValidationField,
+} from "../service-types";
 
 /* services to CRUD, import, export data in table */
 export const tableService = {

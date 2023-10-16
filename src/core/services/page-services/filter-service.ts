@@ -19,17 +19,7 @@ import {
 import { Observable } from "rxjs";
 import memoize from "fast-memoize";
 import { utilService } from "core/services/common-services/util-service";
-
-export enum FilterActionEnum {
-  SET,
-  UPDATE,
-  UPDATE_PAGINATION,
-}
-
-export interface FilterAction<TFilter> {
-  type: FilterActionEnum;
-  payload?: TFilter;
-}
+import { FilterAction, FilterActionEnum } from "../service-types";
 
 export function filterReducer<TFilter extends ModelFilter>(
   state: TFilter,

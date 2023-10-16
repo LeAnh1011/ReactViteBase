@@ -1,4 +1,4 @@
-import { menu, Menu } from "config/menu";
+import { menu } from "config/menu";
 import React, { Reducer, useContext } from "react";
 import { forkJoin, Subscription } from "rxjs";
 import { utilService } from "./util-service";
@@ -7,23 +7,8 @@ import _isEmpty from "lodash/isEmpty";
 import _cloneDeep from "lodash/cloneDeep";
 import { AppStateContext } from "app/AppContext";
 import { ACTION_URL_REGEX } from "core/config/consts";
-
-export enum AppActionEnum {
-  SET,
-  UPDATE,
-}
-
-export interface AppState {
-  permissionPaths?: string[];
-  authorizedAction?: string[];
-  authorizedMenus?: Menu[];
-  authorizedMenuMapper?: Record<string, unknown>;
-}
-
-export interface AppAction {
-  type: AppActionEnum;
-  payload?: AppState;
-}
+import { Menu } from "config/config-type";
+import { AppAction, AppActionEnum, AppState } from "../service-types";
 
 export function appReducer(state: AppState, action: AppAction): AppState {
   switch (action.type) {

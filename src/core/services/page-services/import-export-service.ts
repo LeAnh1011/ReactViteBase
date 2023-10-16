@@ -6,8 +6,6 @@ import { saveAs } from "file-saver";
 import { Modal } from "antd";
 import { useTranslation } from "react-i18next";
 import { webService } from "../common-services/web-service";
-import { generalLanguageKeys } from "config/language-keys";
-
 export const importExportService = {
   /**
    *
@@ -28,7 +26,7 @@ export const importExportService = {
     const handleImportError = useCallback(
       (error: AxiosError<unknown>) => {
         Modal.error({
-          title: translate(generalLanguageKeys.toasts.error),
+          title: translate("general.toasts.error"),
           content: error.response.data as string,
           className: "ant-modal-import-error",
         });
@@ -50,7 +48,7 @@ export const importExportService = {
                 onImport(file, queryValue).subscribe({
                   next: () => {
                     Modal.success({
-                      content: translate(generalLanguageKeys.toasts.success),
+                      content: translate("general.toasts.success"),
                     });
                     if (typeof onImportSuccess === "function") {
                       onImportSuccess();
@@ -79,7 +77,7 @@ export const importExportService = {
               onImport(file, modelId).subscribe({
                 next: (list: T[]) => {
                   Modal.success({
-                    content: translate(generalLanguageKeys.toasts.success),
+                    content: translate("general.toasts.success"),
                   });
                   if (typeof onImportSuccess === "function") {
                     onImportSuccess(list);

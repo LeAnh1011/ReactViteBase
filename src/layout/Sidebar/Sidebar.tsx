@@ -1,9 +1,10 @@
-import { menu, Menu } from "config/menu";
+import { menu } from "config/menu";
 import React, { Fragment } from "react";
 import { useHistory } from "react-router-dom";
 import "./Sidebar.scss";
 import SidebarItem from "./SidebarItem";
 import SidebarMenu from "./SidebarMenu";
+import { Menu } from "config/config-type";
 
 interface SidebarProps {
   menus?: Menu[];

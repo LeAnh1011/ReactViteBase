@@ -1,12 +1,12 @@
 import { OverflowMenuVertical } from "@carbon/icons-react";
 import { AppStateContext } from "app/AppContext";
-import { Menu } from "config/menu";
 import React, { FC, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Collapse } from "reactstrap";
-import type { AppState } from "core/services/common-services/authorization-service";
 import "./Navbar.scss";
 import NavbarItem from "./NavbarItem/NavbarItem";
+import { Menu } from "config/config-type";
+import { AppState } from "core/services/service-types";
 
 interface NabarProps {
   isOpen?: boolean;

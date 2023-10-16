@@ -1,9 +1,5 @@
-import React from 'react';
-
 const DashbroadPage = () => {
-  return (
-    <div>DashbroadPage</div>
-  )
-}
+  return <div>DashbroadPage</div>;
+};
 
-export default DashbroadPage
+export default DashbroadPage;

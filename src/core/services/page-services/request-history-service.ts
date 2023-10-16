@@ -8,7 +8,7 @@ import { finalize, Observable } from "rxjs";
 import { utilService } from "core/services/common-services/util-service";
 import _cloneDeep from "lodash/cloneDeep";
 import { TableRowSelection } from "antd/lib/table/interface";
-import { KeyType } from "./list-service";
+import { KeyType } from "../service-types";
 import {
   RequestHistory,
   RequestHistoryFilter,

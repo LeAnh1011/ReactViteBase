@@ -15,12 +15,12 @@ import appMessageService from "../common-services/app-message-service";
 import { AxiosError } from "axios";
 import { fieldService } from "./field-service";
 import { useHistory } from "react-router-dom";
-import { ValidationError } from "../common-services/validation-service";
 import { utilService } from "core/services/common-services/util-service";
 import {
   GeneralAction,
   GeneralActionEnum,
-} from "../common-services/reducer-service";
+  ValidationError,
+} from "../service-types";
 
 /* Action and Reducer of Mapping control */
 type MappingModel<T extends Model> = {

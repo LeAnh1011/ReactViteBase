@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { KeyType } from "core/services/page-services/list-service";
+import { KeyType } from "core/services/service-types";
 
 interface LayoutMasterActionsProps {
   children?: ReactNode;

@@ -1,44 +1,10 @@
-import type { DataNode } from "antd/lib/tree";
 import { AxiosError } from "axios";
-import type { Menu } from "config/menu";
+import { Menu } from "config/config-type";
 import type { Moment } from "moment";
 import moment from "moment";
 import React, { RefObject } from "react";
 import { Model } from "react3l-common";
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnyObj = { [key: string]: any };
-
-export class TreeNode<T extends Model> implements DataNode {
-  public title: string;
-  public key: number;
-  public item: Model;
-  public children: TreeNode<T>[];
-  public disabled: boolean;
-
-  constructor(model?: T) {
-    if (model) {
-      this.key = model.id;
-      this.item = { ...model };
-      this.children = [];
-      this.title = model.name;
-      this.disabled = model.disabled;
-    } else {
-      this.title = "";
-      this.key = null;
-      this.children = [];
-      this.item = {};
-      this.disabled = false;
-    }
-  }
-}
-
-export enum ValidateStatus {
-  success = "success",
-  warning = "warning",
-  error = "error",
-  validating = "validating",
-}
+import { AnyObj, TreeNode, ValidateStatus } from "../service-types";
 
 export const utilService = {
   useClickOutside(
@@ -55,8 +21,10 @@ export const utilService = {
           exceptNode.forEach((value: string) => {
             const nodeFromId = document.getElementById(value);
             const nodeFromClass = document.getElementsByClassName(value)[0];
-            const node = nodeFromId || nodeFromClass;
-            canInvokeCallback ||= node.contains(event.target as HTMLElement);
+            const node = nodeFromId || nodeFromClass || false;
+            canInvokeCallback ||= node
+              ? node.contains(event.target as HTMLElement)
+              : false;
           });
         }
         if (ref?.current && !canInvokeCallback) {

@@ -1,22 +1,12 @@
 import { Model } from "react3l-common";
 import { produce } from "immer";
 import React from "react";
-import { ValidationError } from "./validation-service";
 import { utilService } from "./util-service";
-
-/* Action and Reducer of Model control */
-export class GeneralActionEnum {
-  public static SET = "SET";
-  public static UPDATE = "UPDATE";
-  public static SET_ERRORS = "SET_ERRORS";
-  public static UPDATE_ERRORS = "UPDATE_ERRORS";
-}
-
-export interface GeneralAction<T extends Model> {
-  type: GeneralActionEnum;
-  payload?: T;
-  errors?: ValidationError;
-}
+import {
+  GeneralAction,
+  GeneralActionEnum,
+  ValidationError,
+} from "../service-types";
 
 export function generalReducer(
   state: Model,

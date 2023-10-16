@@ -2,9 +2,9 @@ import React, { Reducer } from "react";
 import { useHistory } from "react-router-dom";
 import { Model, ModelFilter } from "react3l-common";
 import _isEmpty from "lodash/isEmpty";
-import { FilterAction, FilterActionEnum } from "./filter-service";
 import { Observable } from "rxjs";
 import qs from "qs";
+import { FilterAction, FilterActionEnum } from "../service-types";
 
 export interface RepoState {
   tabKey: string;

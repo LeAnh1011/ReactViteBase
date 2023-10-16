@@ -1,9 +1,10 @@
 import { ModelFilter } from "react3l-common";
 import React, { Reducer, useCallback, useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { FilterAction, filterReducer } from "./filter-service";
+import { filterReducer } from "./filter-service";
 import { utilService } from "../common-services/util-service";
 import qs from "qs";
+import { FilterAction } from "../service-types";
 
 type classTS<TFilter> = new () => TFilter;
 type classContructor<TFilter> = classTS<TFilter> & typeof ModelFilter;

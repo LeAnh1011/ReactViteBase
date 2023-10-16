@@ -4639,10 +4639,10 @@ react3l-localization@^6, react3l-localization@^6.0.0:
   resolved "https://nexus.truesight.asia/repository/npm-registry/react3l-localization/-/react3l-localization-6.0.0.tgz#2ca9dd32f988ca2938dab819c0eab141eb023f12"
   integrity sha512-hju8kb+jVXo1Vuciut4b+1vmMAYCswS1WU4EWSKqbiZrqMlb+ONhjH1+pOfo8qxKjCfS4lMTaQGX4y0PaEBoCw==
 
-react3l-ui-library@0.2.6:
-  version "0.2.6"
-  resolved "https://nexus.truesight.asia/repository/npm-registry/react3l-ui-library/-/react3l-ui-library-0.2.6.tgz#eade54a0565ca796a107973df2b9bb65b9f86c04"
-  integrity sha512-olVVh8nsOyiln2y4WtBGwRtVo6kmtKqsN0P2DcRiKdklIpm1TOePgrqGL4vK059N0C+SywL/lYP2ENUqobVGQg==
+react3l-ui-library@0.2.16:
+  version "0.2.16"
+  resolved "http://nexus.truesight.asia/repository/npm-registry/react3l-ui-library/-/react3l-ui-library-0.2.16.tgz#9f3b2656e614073a3416ffb4c71adfdc6794c76a"
+  integrity sha512-KC4IK7B0Awy46eX20KtA9tiveDoljN12c7Pk/uIl5E59zDA+KXY6SwWj05CHQop4qnwCAWIFxvzRvP05oSCoQg==
   dependencies:
     react-dropzone "^11.5.1"
     react-image-crop "^9.0.5"

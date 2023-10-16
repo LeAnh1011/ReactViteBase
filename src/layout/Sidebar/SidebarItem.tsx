@@ -1,5 +1,5 @@
 import { ChevronUp } from "@carbon/icons-react";
-import { Menu } from "config/menu";
+import { Menu } from "config/config-type";
 import React, { Fragment } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 

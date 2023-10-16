@@ -1,19 +1,14 @@
 import type { Moment } from "moment";
 import { Dispatch, useMemo, useCallback } from "react";
 import { Model } from "react3l-common";
+import memoize from "fast-memoize";
+import * as yup from "yup";
 import {
+  ConfigField,
   GeneralAction,
   GeneralActionEnum,
-} from "./../common-services/reducer-service";
-import memoize from "fast-memoize";
-import { ValidationField } from "../common-services/validation-service";
-import * as yup from "yup";
-
-export interface ConfigField {
-  fieldName: string | [string, string];
-  sideEffectFunc?: () => void;
-  validator?: ValidationField;
-}
+  ValidationField,
+} from "../service-types";
 
 export const fieldService = {
   /**

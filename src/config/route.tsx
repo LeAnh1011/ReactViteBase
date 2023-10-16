@@ -1,19 +1,9 @@
 import { ROOT_ROUTE } from "core/config/consts";
 import { lazy } from "react";
 import { Redirect } from "react-router-dom";
-import {
-  DASHBROAD_ROUTE
-} from "./route-const";
+import { DASHBROAD_ROUTE } from "./route-const";
+import { Route } from "./config-type";
 import DashbroadPage from "pages/DashbroadPage/DashbroadPage";
-/* Routes component*/
-
-export interface Route {
-  path: string;
-  component:
-    | ((props?: unknown) => JSX.Element)
-    | React.LazyExoticComponent<(props?: unknown) => JSX.Element>;
-  exact?: boolean;
-}
 
 const userRoutes: Route[] = [
   // Adding routes here:

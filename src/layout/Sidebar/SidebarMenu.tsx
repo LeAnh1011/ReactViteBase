@@ -1,6 +1,6 @@
-import { Menu } from "config/menu";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
+import { Menu } from "config/config-type";
 
 interface SidebarMenuProps {
   item?: Menu;

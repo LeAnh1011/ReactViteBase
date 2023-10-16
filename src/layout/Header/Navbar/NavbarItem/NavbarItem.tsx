@@ -1,6 +1,6 @@
 import { ChevronDown } from "@carbon/icons-react";
 import classNames from "classnames";
-import { Menu } from "config/menu";
+import { Menu } from "config/config-type";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";

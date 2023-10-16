@@ -23,25 +23,16 @@ import { webService } from "../common-services/web-service";
 import type { Moment } from "moment";
 import { RowSelectionType, TableRowSelection } from "antd/lib/table/interface";
 import { v4 as uuidv4 } from "uuid";
-import { FilterAction, FilterActionEnum } from "./filter-service";
 import appMessageService from "core/services/common-services/app-message-service";
 import { DEFAULT_TAKE } from "core/config/consts";
-
-export enum ListActionType {
-  SET = "SET",
-}
-
-export type KeyType = string | number;
-
-export interface ListState<T extends Model> {
-  list: T[];
-  count: number;
-}
-
-export interface ListAction<T extends Model> {
-  type: string;
-  payload?: ListState<T>;
-}
+import {
+  FilterAction,
+  FilterActionEnum,
+  ListAction,
+  ListActionType,
+  ListState,
+  KeyType,
+} from "../service-types";
 
 function listReducer<T>(state: ListState<T>, action: ListAction<T>) {
   switch (action.type) {
