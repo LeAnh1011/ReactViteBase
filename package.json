@@ -42,7 +42,7 @@
     "react3l-common": "^6.0.0",
     "react3l-decorators": "^6.0.0",
     "react3l-localization": "^6.0.0",
-    "react3l-ui-library": "0.2.16",
+    "react3l-ui-library": "file:./local_lib/react3l-ui-library",
     "reactstrap": "8.9.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "^7.3.0",
@@ -91,7 +91,7 @@
     "react3l-cli": "^1.1.0",
     "rollup-plugin-visualizer": "^5.9.0",
     "ts-nameof.macro": "^4.2.1",
-    "vite": "^4.2.1",
+    "vite": "4.4.9",
     "vite-plugin-ts-nameof": "^1.2.1"
   },
   "scripts": {

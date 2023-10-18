@@ -19,6 +19,18 @@ export default defineConfig((context) => {
     },
     build: {
       outDir: "build",
+      rollupOptions: {
+        plugins: [
+          {
+            name: "disable-treeshake",
+            transform(code, id) {
+              if (id.endsWith("scss.js")) {
+                return { moduleSideEffects: "no-treeshake" };
+              }
+            },
+          },
+        ],
+      },
     },
     resolve: {
       alias: {
