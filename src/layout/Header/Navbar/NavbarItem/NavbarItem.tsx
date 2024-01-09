@@ -116,7 +116,7 @@ const NavbarItem = (props: NabarItemProps) => {
               className="navbar-dropdown__toggle m-r--2xs"
             >
               <div className="d-flex align-items-center">
-                <span className="m-r--2xs">{item.icon}</span>
+                {item.icon && <span className="m-r--2xs">{item.icon}</span>}
                 <span>{translate(`${item.name}`)}</span>
               </div>
             </NavLink>
